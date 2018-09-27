@@ -1,0 +1,14 @@
+<div class="parent">
+  <h2>ngOnChanges y ngOnDestroy</h2>
+  <h3>Componente Padre</h3>
+
+  <input [(ngModel)]="newName" (keyup.enter)="addHero()">
+  <button (click)="addHero()">Agregar Persona</button>
+  <button (click)="reset()">Resetear</button>
+
+  <div *ngFor="let persona of gente" lch-spy class="gente">
+    {{persona}}
+  </div>
+  <h4>-- Logs de la directiva espia hija --</h4>
+  <div *ngFor="let msg of spyLog">{{msg}}</div>
+</div>
